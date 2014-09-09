@@ -13,12 +13,13 @@
     -->
 
 
-    <SolidColorBrush x:Key="TitleBarBackgroundBrush" Color="White" />
+    <SolidColorBrush x:Key="TitleBarBackgroundBrush" Color="Beige" />
+    <SolidColorBrush x:Key="WindowBackGroundColor" Color="Beige" />
     <SolidColorBrush x:Key="WindowBorderBrush" Color="#007ACC" />
     <SolidColorBrush x:Key="WindowBorderBrushInactive" Color="#999999" />
     <SolidColorBrush x:Key="WindowStatusForeground" Color="#FFFFFF" />
     <SolidColorBrush x:Key="WindowStatusForegroundInactive" Color="#FFFFFF" />
-    <SolidColorBrush x:Key="WindowBackGroundColor" Color="White" />
+    
 
 
     <!-- Cool comment -->

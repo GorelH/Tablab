@@ -53,7 +53,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="HomePageX.xaml.cs">
+      <DependentUpon>HomePageX.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\VS2012WindowStyle.cs" />
+    <Page Include="HomePageX.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ListBox\ListBoxTemplate.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

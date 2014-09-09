@@ -3,27 +3,37 @@
 
 
 
-    <Style TargetType="{x:Type TabControl}" >
-        <Setter Property="SnapsToDevicePixels" Value="True" />
-        <Setter Property="Background" Value="White" />
-        <Setter Property="TabStripPlacement" Value="Left" />
-        <Setter Property="Margin" Value="0,0,0,0" />
-    </Style>
+
 
     <Style TargetType="TabItem" x:Key="TabItemStyle">
         <Setter Property="Background" Value="Transparent" />
-        <Setter Property="Foreground" Value="White" />
-
+        <Setter Property="Foreground" Value="SaddleBrown" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="TabItem">
                     <Grid Name="Panel">
-                        <Border Name="Border" BorderThickness="0" HorizontalAlignment="Stretch" CornerRadius="1">
-                            <DockPanel LastChildFill="True" >
+                        <Grid.Triggers>
+                            <EventTrigger RoutedEvent="Grid.MouseEnter">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="BackBorder" Storyboard.TargetProperty="Width" To="20" Duration="0:0:0:0.2" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Border.MouseLeave">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="BackBorder" Storyboard.TargetProperty="Width" To="10" Duration="0:0:0:0.2" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Grid.Triggers>
+                        <Border Name="Border" BorderThickness="0" HorizontalAlignment="Stretch" CornerRadius="1" Width="200">
+                            <DockPanel LastChildFill="True">
                                 <Border Name="BackBorder" Width="0"  Margin="0" Background="White" DockPanel.Dock="Left" />
                                 <StackPanel Orientation="Horizontal" Height="65"  Margin="10,0,0,0" HorizontalAlignment="Left">
-                                    <Image Source="Images/ico1.png" Stretch="Fill" Width="40" Height="40"/>
-                                    <TextBlock Name="TabItemlabel" Text="EMPLOI DU TEMPS" FontSize="15" FontWeight="Bold" Margin="10" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                    <Image Source="Images/ico9.png" Stretch="Fill" Width="40" Height="40"/>
+                                    <TextBlock Name="TabItemlabel" Text="Etudiants" FontSize="14" FontWeight="Bold" Margin="10" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                                 </StackPanel>
                             </DockPanel>
                         </Border>
@@ -32,8 +42,10 @@
                         <Trigger Property="IsSelected" Value="True">
                             <Setter TargetName="TabItemlabel" Property="Foreground" Value="Orange" />
                             <Setter TargetName="Border" Property="Background" Value="#3A3A3A" />
-                            <Setter TargetName="Border" Property="Margin" Value="0,0,-5,0" />
+                            <Setter TargetName="Border" Property="Margin" Value="0,0,-10,0" />
                             <Setter TargetName="BackBorder" Property="Width" Value="5" />
+                            <Setter TargetName="BackBorder" Property="Margin" Value="-10,0,0,0" />
+                            <Setter TargetName="BackBorder" Property="Background" Value="Orange" />
                             <Setter TargetName="Border" Property="Effect">
                                 <Setter.Value>
                                     <DropShadowEffect Color="Gray"  BlurRadius="20" ShadowDepth=".5" Opacity="0.5" Direction="90" />
@@ -42,20 +54,7 @@
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="TabItemlabel" Property="Foreground" Value="Orange" />
-                            <!--<Setter TargetName="Border" Property="Storyboard.RepeatBehavior"  />-->
-                            
-
-
-
-
-
-
-
-
                         </Trigger>
-
-                        
-                        
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
@@ -65,21 +64,7 @@
 
     
 
-    <Storyboard x:Key="MoveMe">
-        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" 
-            Storyboard.TargetName="BackBorder" 
-            Storyboard.TargetProperty="Margin">
-            <DiscreteObjectKeyFrame KeyTime="00:00:00">
-                <DiscreteObjectKeyFrame.Value>
-                    <Thickness>134,70,0,0</Thickness>
-                </DiscreteObjectKeyFrame.Value>
-            </DiscreteObjectKeyFrame>
-            <DiscreteObjectKeyFrame KeyTime="00:00:03">
-                <DiscreteObjectKeyFrame.Value>
-                    <Thickness>50,70,0,0</Thickness>
-                </DiscreteObjectKeyFrame.Value>
-            </DiscreteObjectKeyFrame>
-        </ObjectAnimationUsingKeyFrames>
-    </Storyboard>
-    
+
+
+
 </ResourceDictionary>

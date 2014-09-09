@@ -52,6 +52,16 @@ namespace TabStoplab
 
             List<Employer> EmpList = new List<Employer> ();
 
+            EmpList.Add (new Employer () { Name = "Halid Cisse", Position = "CEO", Img = GetImageFromFile ("Images/ico1.png") });
+            EmpList.Add (new Employer () { Name = "Ousou Djounou", Position = "CMO", Img = GetImageFromFile ("Images/ico2.png") });
+            EmpList.Add (new Employer () { Name = "Amad Cisse", Position = "CTO", Img = GetImageFromFile ("Images/ico3.png") });
+            EmpList.Add (new Employer () { Name = "Keita Assouma", Position = "TCM", Img = GetImageFromFile ("Images/ico4.png") });
+            EmpList.Add (new Employer () { Name = "Bayogo Madou", Position = "NMO", Img = GetImageFromFile ("Images/ico5.png") });
+            EmpList.Add (new Employer () { Name = "Maiga Ouamr", Position = "YHN", Img = GetImageFromFile ("Images/ico6.png") });
+            EmpList.Add (new Employer () { Name = "Toure Kemera", Position = "RTE", Img = GetImageFromFile ("Images/ico7.png") });
+            EmpList.Add (new Employer () { Name = "Diallo Adam", Position = "VCI", Img = GetImageFromFile ("Images/ico8.png") });
+            EmpList.Add (new Employer () { Name = "Barry Alhassane", Position = "OKM", Img = GetImageFromFile ("Images/ico9.png") });
+            EmpList.Add (new Employer () { Name = "Cisse Aicha", Position = "LLK", Img = GetImageFromFile ("Images/ico10.png") });
             EmpList.Add (new Employer () { Name = "Halid", Position = "CEO", Img = GetImageFromFile ("Images/ico1.png") });
             EmpList.Add (new Employer () { Name = "Ousou", Position = "CMO", Img = GetImageFromFile ("Images/ico2.png") });
             EmpList.Add (new Employer () { Name = "Amad", Position = "CTO", Img = GetImageFromFile ("Images/ico3.png") });
@@ -76,6 +86,11 @@ namespace TabStoplab
             img.EndInit ();
 
             return img;
+        }
+
+        private void Button_Click ( object sender, RoutedEventArgs e )
+        {
+            MainFrame.NavigationService.Navigate (new Uri ("HomePageX.xaml", UriKind.Relative));
         }
 
 
