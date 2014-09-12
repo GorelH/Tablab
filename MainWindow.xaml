@@ -233,11 +233,7 @@
                 <TabItem Style="{DynamicResource TabItemStyle}">
                     <StackPanel>
                         <Button Width="200" Click="Button_Click"> Go there</Button>
-                        <Frame Name="MainFrame" Width="500" Height="500" Opacity="1" Background="White" NavigationUIVisibility="Hidden" >
-                            <!--<Frame.Content>
-                                <ProgressBar Margin="55,63,124,58"/>
-                            </Frame.Content>-->
-                        </Frame>
+                        <Frame Name="MainFrame" Width="500" Height="500" Opacity="1" Background="White" NavigationUIVisibility="Hidden" />
                     </StackPanel>
                 </TabItem>
             </TabControl>
