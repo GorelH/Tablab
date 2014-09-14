@@ -211,36 +211,30 @@
                 </BeginStoryboard>
             </EventTrigger>
         </Frame.Triggers>-->
-        
-        
+
+
         <Frame.Content>
-
-            
-
-            <!--<Grid Background="White" x:Name="HomeGrid">-->
-        <!--Background="#525252"-->
-                <TabControl Background="Transparent" TabStripPlacement="Left" SnapsToDevicePixels="True">
+            <TabControl Background="Transparent" TabStripPlacement="Left" SnapsToDevicePixels="True">
                 <TabItem Style="{DynamicResource TabItemStyle}">
-                        <Frame Background="White">
-                            <Frame.Content>
+                    <Frame Background="White">
+                        <Frame.Content>
                             <ListBox Name="MylistBox1" Style="{DynamicResource ListBoxStyle}" ItemTemplate="{StaticResource ListBoxTempX}" Margin="10" />
-                            </Frame.Content>
-                        </Frame>
-                    </TabItem>
-                    <TabItem Style="{DynamicResource TabItemStyle}">
-                        <Calendar VerticalAlignment="Center"/>
-                    </TabItem>
+                        </Frame.Content>
+                    </Frame>
+                </TabItem>
+                <TabItem Style="{DynamicResource TabItemStyle}">
+                    <Calendar VerticalAlignment="Center"/>
+                </TabItem>
                 <TabItem Style="{DynamicResource TabItemStyle}">
                     <StackPanel>
-                        <Button Width="200" Click="Button_Click"> Go there</Button>
+                        <Button Width="200" Click="Button_Click">Go there</Button>
                         <Frame Name="MainFrame" Width="500" Height="500" Opacity="1" Background="White" NavigationUIVisibility="Hidden" />
                     </StackPanel>
                 </TabItem>
             </TabControl>
-            <!--</Grid>-->
         </Frame.Content>
-        
-        
+
+
     </Frame>
     
 </Window>
